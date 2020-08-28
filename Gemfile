@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'faker'
+
+gem 'activerecord-reset-pk-sequence'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
