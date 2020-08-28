@@ -1,6 +1,9 @@
 Doctor.destroy_all
 Patient.destroy_all
 Appointment.destroy_all
+Doctor.reset_pk_sequence
+Patient.reset_pk_sequence
+Appointment.reset_pk_sequence
 
 meredith = Doctor.create({name: "Meredith Grey", department: "Internal Medicine"})
 hawkeye = Doctor.create({name: "Hawkeye Pierce", department: "Surgery"})
@@ -23,3 +26,6 @@ Appointment.create([
   {appointment_datetime: DateTime.new(2016, 05, 31, 17, 00, 0), patient: homer, doctor: hawkeye},
   {appointment_datetime: DateTime.new(2017, 06, 03, 10, 00, 0), patient: marge, doctor: meredith}
 ])
+
+
+puts "🙂"
