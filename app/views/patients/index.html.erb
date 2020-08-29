@@ -1,0 +1,7 @@
+<h1> All Patients </h1>
+
+<ul>
+    <% @patients.map do |patient| %>
+    <li> <strong>Name:</strong> <%= link_to patient.name, patient_path(patient) %> <strong>Number of Appointments:</strong> <%= patient.appointments.count%>
+    <% end %>
+</ul>

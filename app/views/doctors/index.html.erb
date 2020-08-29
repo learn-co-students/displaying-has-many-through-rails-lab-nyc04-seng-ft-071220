@@ -1,0 +1,7 @@
+<h1> All The Doctors </h1>
+
+<ul>
+    <% @doctors.map do |doctor| %>
+    <li> <strong>Doctor:</strong> <%= link_to doctor.name, doctor_path(doctor) %> - <strong>Department:</strong> <%= doctor.department %> </li>
+    <% end %>
+</ul>
