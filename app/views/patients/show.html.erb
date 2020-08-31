@@ -1,0 +1,9 @@
+<h1>This is the show view </h1>
+
+<% @patient.appointments.each do |appnt|  %>
+<% @patient_doctor = @patient.doctors.find(appnt.doctor_id) %>
+<%= link_to @patient_doctor.name, doctor_path(@patient_doctor) %> -
+<%= link_to appnt.appointment_datetime.strftime("%B %d, %Y at %k:%M"), appointment_path(appnt) %> <br>
+<% end %>
+
+

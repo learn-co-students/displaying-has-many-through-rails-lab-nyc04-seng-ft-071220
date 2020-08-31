@@ -1,0 +1,7 @@
+
+<% @doctor.appointments.map do |appnt| %>
+
+<% @doctor_patient = @doctor.patients.find(appnt.patient) %>
+<%= link_to @doctor_patient.name, patient_path(@doctor_patient) %> -
+<%= link_to appnt.appointment_datetime.strftime("%B %d, %Y at %k:%M"), appointment_path(appnt) %> <br>
+<% end %>
