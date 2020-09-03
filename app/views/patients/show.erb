@@ -1,0 +1,13 @@
+<h1>Patient Information</h1>
+<h3>Name: <%= @patient.name %></h3>
+<div>
+   <p>View All Appointments: </p>
+
+<ul>
+    <% @patient.appointments.map do |app| %><br>
+        <li><strong>Date/Time: </strong><%= app.datetime %> - - <strong>Doctor Name: </strong><%=link_to app.doctor.name, doctor_path(app.doctor) %></li>    
+     <% end %>
+</ul>
+
+   <%= button_to "Patient Index", patients_path, method: :get %>
+</div>

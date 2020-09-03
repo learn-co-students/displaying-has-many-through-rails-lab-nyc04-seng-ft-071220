@@ -1,0 +1,11 @@
+<h1>Dr. <%= @doctor.name %> | <%= @doctor.department %> </h1>
+
+<div>
+   <p><h3><strong>View All Appointments: </strong></h3></p>
+
+<ul>
+    <% @doctor.appointments.map do |app| %><br>
+        <li><strong>Date/Time: </strong><%= app.datetime %> - - <strong>Patient Name: </strong><%=link_to app.patient.name, patient_path(app.patient) %></li>    
+     <% end %>
+</ul>
+</div>
